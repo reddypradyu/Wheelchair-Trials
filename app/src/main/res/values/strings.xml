@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Wheelchair Trials</string>
+    <string name="button_text_rec">Start a Trial</string>
+    <string name="button_text_stop">Stop Trial</string>
+    <string name="wheel_side">Wheel Side</string>
+    <string name="wheel_type">Wheel Type</string>
+    <string name="mass">Mass</string>
+</resources>
