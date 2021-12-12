@@ -12,6 +12,7 @@ import android.os.Bundle;
 import android.os.SystemClock;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ToggleButton;
 
 import java.io.BufferedReader;
@@ -42,11 +43,24 @@ public class MainActivity extends AppCompatActivity {
         button.setOnCheckedChangeListener((compoundButton, on) -> {
             startRecording = on;
         });
+        final Button redoButton = (Button) findViewById(R.id.button3);
         final Button resultButton = (Button) findViewById(R.id.button2);
+        redoButton.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                EditText wheelType = (EditText) findViewById(R.id.wheelType);
+                EditText wheelSide = (EditText) findViewById(R.id.wheelSide);
+                EditText mass = (EditText) findViewById(R.id.mass);
+                wheelType.setText(null);
+                wheelSide.setText(null);
+                mass.setText(null);
+                button.setChecked(false);
+                resultButton.setEnabled(false);
+            }
+        });
+
         resultButton.setEnabled(toggle);
         button.setOnCheckedChangeListener(((compoundButton, off) -> {
-            toggle = !toggle;
-            resultButton.setEnabled(toggle);
+            resultButton.setEnabled(true);
         }));
 
 
@@ -75,6 +89,7 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(this, Result.class);
         startActivity(intent);
     }
+
     private void saveData(SensorEvent event) {
         File dataFile = new File(getFilesDir().getAbsolutePath() + "/data.csv");
         SimpleDateFormat timeStampFormat = new SimpleDateFormat("MM-dd-yyyy hh:mm:ss");
