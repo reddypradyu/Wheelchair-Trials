@@ -25,25 +25,25 @@ public class Result extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_result);
-        GraphView graph = findViewById(R.id.idGraphView);
-        LineGraphSeries<DataPoint> series = new LineGraphSeries<>(new DataPoint[] {
-                new DataPoint(0, 1),
-                new DataPoint(1, 5),
-                new DataPoint(2, 3),
-                new DataPoint(3, 2),
-                new DataPoint(4, 6)
-        });
-        graph.addSeries(series);
-        List<List<String>> records = new ArrayList<>();
-        try (BufferedReader br = new BufferedReader(new FileReader(getFilesDir().getAbsolutePath() + "/data.csv"))) {
-            String line;
-            while ((line = br.readLine()) != null) {
-                String[] values = line.split(COMMA_DELIMITER);
-                records.add(Arrays.asList(values));
-            }
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+//        GraphView graph = findViewById(R.id.idGraphView);
+//        LineGraphSeries<DataPoint> series = new LineGraphSeries<>(new DataPoint[] {
+//                new DataPoint(0, 1),
+//                new DataPoint(1, 5),
+//                new DataPoint(2, 3),
+//                new DataPoint(3, 2),
+//                new DataPoint(4, 6)
+//        });
+//        graph.addSeries(series);
+//        List<List<String>> records = new ArrayList<>();
+//        try (BufferedReader br = new BufferedReader(new FileReader(getFilesDir().getAbsolutePath() + "/data.csv"))) {
+//            String line;
+//            while ((line = br.readLine()) != null) {
+//                String[] values = line.split(COMMA_DELIMITER);
+//                records.add(Arrays.asList(values));
+//            }
+//        } catch (IOException e) {
+//            e.printStackTrace();
+//        }
 //        SimpleDateFormat[] timeStamps = new SimpleDateFormat[records.size()];
 //        Double[] xVal = new Double[records.size()];
 //        Double[] yVal = new Double[records.size()];

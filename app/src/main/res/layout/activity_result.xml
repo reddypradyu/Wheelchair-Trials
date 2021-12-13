@@ -1,16 +1,59 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Result">
 
-    <!--line graph view where we will
-        be displaying our data-->
-    <com.jjoe64.graphview.GraphView
-        android:id="@+id/idGraphView"
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="100dp"
+        android:layout_marginTop="104dp"
+        android:ems="13"
+        android:text="Here is the velocity graph for the trial:"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.523"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentTop="true" />
-</RelativeLayout>
+        android:layout_marginTop="4dp"
+        android:src="@drawable/graph"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+    <!--<?xml version="1.0" encoding="utf-8"?>-->
+    <!--<RelativeLayout-->
+    <!--    xmlns:android="http://schemas.android.com/apk/res/android"-->
+    <!--    xmlns:tools="http://schemas.android.com/tools"-->
+    <!--    android:layout_width="match_parent"-->
+    <!--    android:layout_height="match_parent"-->
+    <!--    tools:context=".Result">-->
+
+    <!--    &lt;!&ndash;line graph view where we will-->
+    <!--        be displaying our data&ndash;&gt;-->
+    <!--&lt;!&ndash;    <com.jjoe64.graphview.GraphView&ndash;&gt;-->
+    <!--&lt;!&ndash;        android:id="@+id/idGraphView"&ndash;&gt;-->
+    <!--&lt;!&ndash;        android:layout_width="match_parent"&ndash;&gt;-->
+    <!--&lt;!&ndash;        android:layout_height="wrap_content"&ndash;&gt;-->
+    <!--&lt;!&ndash;        android:layout_alignParentTop="true" />&ndash;&gt;-->
+    <!--    <TextView-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:text="Here's the velocity graph for the trial:"-->
+    <!--        android:layout_above="@+id/graph"-->
+    <!--        android:layout_margin="20dp"/>-->
+
+    <!--    <ImageView-->
+    <!--        android:id="@+id/graph"-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="match_parent"-->
+    <!--        android:src="@drawable/graph" />-->
+    <!--    -->
+    <!--</RelativeLayout>-->
